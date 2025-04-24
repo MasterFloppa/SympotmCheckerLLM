@@ -1,4 +1,4 @@
-CREATE DATABASE symptop_checker;
+CREATE DATABASE symptom_checker;
 
 CREATE TABLE users (
     username VARCHAR(255),
@@ -12,7 +12,7 @@ CREATE TABLE chats (
     chat_id SERIAL PRIMARY KEY,
     diagnosis TEXT NOT NULL,
     sender_email VARCHAR(100) REFERENCES users(email) ON DELETE CASCADE,
-    chat_name TEXT
+    chat_name TEXT,
     date_created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
